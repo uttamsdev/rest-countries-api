@@ -13,7 +13,7 @@ const displayCountires = countries => {
         div.className = "country";
         div.innerHTML = `
         <img width="100px" src="${country.flags.png}"
-        <h5>${country.name.common}</h5>
+        <p><span>${country.name.common}</span></p>
         <p><span>Capital: </span>${country.capital}</p>
         <p><span>Population: </span>${country.population}</p>
         <p><span>Region: </span>${country.region}</p>
@@ -45,7 +45,7 @@ const displayCountry = countries => {
         div.className = "country";
         div.innerHTML = `
         <img width="100px" src="${country.flags.png}"
-        <span>${country.name.common}</span>
+        <p><span>${country.name.common}</span></p>
         <p><span>Capital: </span>${country.capital}</p>
         <p><span>Population: </span>${country.population}</p>
         <p><span>Region: </span>${country.region}</p>
