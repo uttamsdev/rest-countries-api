@@ -32,7 +32,7 @@ body{
     display: flex;
     
 }
-.menus ul li a{
+.menus ul li button{
     text-decoration: none;
     margin-right: 15px;
     background-color: white;
@@ -48,7 +48,7 @@ body{
     background-color: blue;
     color: white;
 }
-.menus ul li a:hover{
+.menus ul li button:hover{
     background-color: blue;
     color: white;
 }
