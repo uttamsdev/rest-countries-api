@@ -7,7 +7,7 @@
   list-style: none;
 }
 body {
-  background-color: rgb(235, 233, 248);
+  background-color: rgba(238, 237, 250, 0.883) !important;
 }
 .header {
   display: grid;
