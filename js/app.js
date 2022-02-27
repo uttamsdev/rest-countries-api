@@ -1,3 +1,11 @@
+//toggleSpinner
+const toggleSpinner = displayStyle => {
+  document.getElementById('spinner').style.display = displayStyle;
+}
+const toggleResult = displayStyle => {
+  document.getElementById('result').style.display = displayStyle;
+}
+
 const loadCountries = () => {
     fetch('https://restcountries.com/v3.1/all')
     .then(response => response.json())
@@ -29,8 +37,9 @@ const all = document.getElementById('all').addEventListener('click', function(){
 })
 
 document.getElementById('region').addEventListener('click', function(event){
-    console.log();
     const region = event.target.innerText;
+    toggleSpinner('block');
+    toggleResult('none');
     // console.log(id.innerText);
     fetch(`https://restcountries.com/v3.1/region/${region}`)
     .then(res => res.json())
@@ -54,5 +63,7 @@ const displayCountry = countries => {
         divContainer.appendChild(div);
         // console.log(country);
     })
+    toggleSpinner('none');
+    toggleResult('block');
 
 }
