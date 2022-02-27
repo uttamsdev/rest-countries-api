@@ -2,6 +2,7 @@
 const toggleSpinner = displayStyle => {
   document.getElementById('spinner').style.display = displayStyle;
 }
+//toggle results
 const toggleResult = displayStyle => {
   document.getElementById('result').style.display = displayStyle;
 }
@@ -38,6 +39,7 @@ const all = document.getElementById('all').addEventListener('click', function(){
 
 document.getElementById('region').addEventListener('click', function(event){
     const region = event.target.innerText;
+    //spinner & result show/hide
     toggleSpinner('block');
     toggleResult('none');
     // console.log(id.innerText);
@@ -63,6 +65,7 @@ const displayCountry = countries => {
         divContainer.appendChild(div);
         // console.log(country);
     })
+    //spinner & result show/hide
     toggleSpinner('none');
     toggleResult('block');
 
