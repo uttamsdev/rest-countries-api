@@ -8,6 +8,7 @@ const toggleResult = displayStyle => {
 }
 
 const loadCountries = () => {
+    toggleSpinner('block');
     fetch('https://restcountries.com/v3.1/all')
     .then(response => response.json())
     .then(data => displayCountires(data))
@@ -30,6 +31,7 @@ const displayCountires = countries => {
         `
         divContainer.appendChild(div);
     })
+    toggleSpinner('none');
 }
 loadCountries();
 
